@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { Github, Mail, ExternalLink, Star, GitFork, ArrowUpRight, Send, User, Phone, MessageSquare, Linkedin, Code } from 'lucide-react';
 
@@ -8,11 +8,11 @@ const PortfolioWebsite = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
   const GITHUB_USERNAME = 'blazethunderstorm';
-  const roles = ['Business Analyst', 'Full Stack Developer', 'Data Analyst', 'Problem Solver'];
+  const roles = ['Frontend Developer', 'Backend Developer', 'Problem Solver'];
 
   // Skills data organized by category
   const skillCategories = [
@@ -293,7 +293,7 @@ const PortfolioWebsite = () => {
               <h3 className="text-4xl font-bold mb-4 text-white">I'm Anirudh</h3>
               <p className="text-2xl text-gray-400 font-semibold mb-6">Business Analyst & Full Stack Developer</p>
               <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                I am a Full-Stack developer and Business Analyst based in Jabalpur, India. I am studying at IIIT Jabalpur pursuing B.Tech in Electronics and Communication Engineering. I am passionate about building scalable applications, analyzing data for business insights, and solving complex problems through code.
+                I am a Full-Stack developer and Business Analyst based in Jabalpur, India. I am studying at IIIT Jabalpur pursuing B.Tech in Electronics and Communication Engineering. I am passionate about building scalable applications and solving complex problems through code.
               </p>
               <div className="space-y-3 text-gray-400 mb-8">
                 <p className="flex items-center gap-3">
@@ -496,7 +496,7 @@ const PortfolioWebsite = () => {
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-white/10 text-center text-gray-500 relative z-10">
-        <p>© 2024 Anirudh Narang. All rights reserved.</p>
+        <p>© Anirudh Narang. All rights reserved.</p>
       </footer>
 
       <style>{`
