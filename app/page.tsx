@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { Github, Mail, ExternalLink, Star, GitFork, ArrowUpRight, Send, User, Phone, MessageSquare, Linkedin, Code } from 'lucide-react';
 
@@ -12,56 +12,55 @@ const PortfolioWebsite = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
   const GITHUB_USERNAME = 'blazethunderstorm';
-  const roles = ['Backend Developer','Frontend Developer', 'Problem Solver'];
+  const roles = ['Business Analyst', 'Full Stack Developer', 'Data Analyst', 'Problem Solver'];
 
   // Skills data organized by category
   const skillCategories = [
     {
       title: 'Programming Languages',
       skills: [
-        { name: 'JavaScript', icon: '🟨' },
-        { name: 'TypeScript', icon: '💠' },
-        { name: 'Python', icon: '🐍' },
-        { name: 'C/C++', icon: '⚙️' },
-        { name: 'Go', icon: '🔷' },
-        { name: 'Rust', icon: '🦀' },
-        { name: 'Ruby', icon: '💎' },
-        { name: 'HTML/CSS', icon: '🎨' }
+        { name: 'JavaScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+        { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+        { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+        { name: 'C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
+        { name: 'Go', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
+        { name: 'Rust', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg' },
+        { name: 'Ruby', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg' },
+        { name: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+        { name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' }
       ]
     },
     {
       title: 'Frameworks & Technologies',
       skills: [
-        { name: 'React.js', icon: '⚛️' },
-        { name: 'Next.js', icon: '▲' },
-        { name: 'Vue.js', icon: '💚' },
-        { name: 'Nuxt.js', icon: '🟩' },
-        { name: 'Node.js', icon: '🟢' },
-        { name: 'Express.js', icon: '🚂' },
-        { name: 'Tailwind CSS', icon: '🌊' },
-        { name: 'Socket.io', icon: '🔌' },
-        { name: 'Rails', icon: '🛤️' },
-        { name: 'LangChain', icon: '🔗' },
-        { name: 'Prisma', icon: '🔷' }
+        { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+        { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+        { name: 'Vue.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
+        { name: 'Nuxt.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg' },
+        { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+        { name: 'Express', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+        { name: 'Tailwind', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg' },
+        { name: 'Socket.io', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg' },
+        { name: 'Rails', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg' },
+        { name: 'Prisma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg' }
       ]
     },
     {
       title: 'Databases',
       skills: [
-        { name: 'PostgreSQL', icon: '🐘' },
-        { name: 'MongoDB', icon: '🍃' }
+        { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+        { name: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' }
       ]
     },
     {
       title: 'Development Tools',
       skills: [
-        { name: 'Git', icon: '📂' },
-        { name: 'Docker', icon: '🐳' },
-        { name: 'VS Code', icon: '💻' },
-        { name: 'Prisma ORM', icon: '🗄️' },
-        { name: 'JWT Auth', icon: '🔐' },
-        { name: 'API Dev', icon: '🌐' },
-        { name: 'Wireshark', icon: '🦈' }
+        { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+        { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+        { name: 'VS Code', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+        { name: 'GitHub', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+        { name: 'npm', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg' },
+        { name: 'Webpack', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg' }
       ]
     }
   ];
@@ -294,7 +293,7 @@ const PortfolioWebsite = () => {
               <h3 className="text-4xl font-bold mb-4 text-white">I'm Anirudh</h3>
               <p className="text-2xl text-gray-400 font-semibold mb-6">Business Analyst & Full Stack Developer</p>
               <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                I am a Full-Stack developer and Business Analyst based in Jabalpur, India. I am studying at IIIT Jabalpur pursuing B.Tech in Electronics and Communication Engineering. I am passionate about building scalable applications and solving complex problems through code.
+                I am a Full-Stack developer and Business Analyst based in Jabalpur, India. I am studying at IIIT Jabalpur pursuing B.Tech in Electronics and Communication Engineering. I am passionate about building scalable applications, analyzing data for business insights, and solving complex problems through code.
               </p>
               <div className="space-y-3 text-gray-400 mb-8">
                 <p className="flex items-center gap-3">
@@ -343,8 +342,13 @@ const PortfolioWebsite = () => {
                     >
                       <div className="relative">
                         <div className="absolute -inset-0.5 bg-white/10 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
-                        <div className="relative bg-gray-900 rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all transform group-hover:scale-105 group-hover:-translate-y-2 h-full flex flex-col items-center justify-center">
-                          <div className="text-4xl mb-3 transform group-hover:scale-110 transition-transform">{skill.icon}</div>
+                        <div className="relative bg-gray-900 rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all transform group-hover:scale-105 group-hover:-translate-y-2 h-full flex flex-col items-center justify-center min-h-[140px]">
+                          <img 
+                            src={skill.logo} 
+                            alt={skill.name}
+                            className="w-16 h-16 mb-3 transform group-hover:scale-110 transition-transform object-contain"
+                            style={{ filter: 'brightness(0) invert(1)' }}
+                          />
                           <h3 className="text-base font-semibold text-white text-center">{skill.name}</h3>
                         </div>
                       </div>
@@ -492,7 +496,7 @@ const PortfolioWebsite = () => {
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-white/10 text-center text-gray-500 relative z-10">
-        <p>©Anirudh Narang. All rights reserved.</p>
+        <p>© 2024 Anirudh Narang. All rights reserved.</p>
       </footer>
 
       <style>{`
