@@ -294,7 +294,7 @@ const PortfolioWebsite = () => {
               <h3 className="text-4xl font-bold mb-4 text-white">I'm Anirudh</h3>
               <p className="text-2xl text-gray-400 font-semibold mb-6">Business Analyst & Full Stack Developer</p>
               <p className="text-gray-400 leading-relaxed mb-6 text-lg">
-                I am a Full-Stack developer and Business Analyst based in Jabalpur, India. I am studying at IIIT Jabalpur pursuing B.Tech in Electronics and Communication Engineering. I am passionate about building scalable applications and solving complex problems through code.
+                I am a Full-Stack developer and Business Analyst based in Jabalpur, India. I am studying at IIIT Jabalpur pursuing B.Tech in Electronics and Communication Engineering. I am passionate about building scalable applications, analyzing data for business insights, and solving complex problems through code.
               </p>
               <div className="space-y-3 text-gray-400 mb-8">
                 <p className="flex items-center gap-3">
